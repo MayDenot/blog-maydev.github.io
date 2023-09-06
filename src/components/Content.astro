@@ -1,0 +1,45 @@
+---
+import ArticlesCateg from "../components/ArticlesCateg.astro";
+import RecientArticles from "../components/RecientArticles.astro";
+---
+
+<section class="article">
+  <div class="wrapper-article">
+    <h1>Artículos por categorías</h1>
+    <ArticlesCateg
+      title="Hardware"
+      paraph="En esta sección brindo opiniones e informacion sobre hardware."
+    />
+    <br />
+    <ArticlesCateg
+      title="Programación"
+      paraph="En esta sección comparto información sobre programación, y mis estudios como autodidácta."
+    />
+    <h3>Últimos artículos</h3>
+    <RecientArticles
+      title="Hardware"
+      paraph="Requisitos de una PC para programar en 2023."
+      date="04/09/23"
+    />
+    <br />
+    <RecientArticles
+      title="Programación"
+      paraph="¿Cómo aprendí Astro? Ruta de aprendizaje, guía y recomendación."
+      date="18/08/23"
+    />
+  </div>
+</section>
+
+<style>
+  .article {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+  }
+  .wrapper-article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+</style>

@@ -1,0 +1,130 @@
+<section>
+  <header>
+    <img src="/LogoPortafolio.webp" alt="Logo de MayDev" />
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      height="2.3em"
+      viewBox="0 0 384 512"
+    >
+      <path
+        d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"
+      ></path>
+    </svg>
+  </header>
+  <div class="body">
+    <h2>
+      Blog sobre
+      <span>tecnologías y programación</span>
+    </h2>
+    <input type="search" name="search" id="search-article" />
+    <div class="social-media">
+      <ul>
+        <li>
+          <a href="https://github.com/MayDenot" target="_blank">Github</a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/mayra-denot-dev/" target="_blank"
+            >Linkedin</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://maydenot.github.io/MyPortafolio.github.io/"
+            target="_blank">Portafolio</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+  <footer>
+    <h5>Mayra Denot</h5>
+  </footer>
+</section>
+
+<style>
+  section {
+    width: 100%;
+    height: 340px;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+  }
+  header img {
+    width: 15%;
+  }
+  header svg {
+    margin-right: 10px;
+  }
+  h2 {
+    max-width: 20ch;
+    font-weight: 600;
+    margin-top: 5px;
+    margin-bottom: 15px;
+  }
+  h2 span {
+    color: var(--secundary-color);
+  }
+  input {
+    width: 100%;
+    height: 30px;
+    border-radius: 10px;
+    border: 0;
+    outline: none;
+    background-color: rgba(255, 255, 255, 75%);
+    padding: 0 15px;
+  }
+  ul {
+    display: flex;
+    gap: 20px;
+  }
+  ul li {
+    list-style: none;
+  }
+  li a {
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  footer {
+    margin-top: 40px;
+  }
+  footer h5 {
+    font-weight: 400;
+    margin: 0;
+  }
+  @media screen and (width >= 768px) {
+    header {
+      width: 100%;
+      justify-content: space-around;
+      padding: 10px 0;
+    }
+    header img {
+      width: 10%;
+    }
+    header svg {
+      height: 2.5em;
+      margin-right: 10px;
+    }
+    h2 {
+      max-width: 25ch;
+      font-size: 26px;
+    }
+    .social-media {
+      display: flex;
+      justify-content: center;
+    }
+    li a {
+      font-size: 15px;
+    }
+    footer {
+      margin-top: 15px;
+    }
+  }
+</style>

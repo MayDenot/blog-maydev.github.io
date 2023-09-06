@@ -1,0 +1,39 @@
+---
+  interface Props {
+    title: string;
+    paraph: string;
+    date: string;
+  }
+
+  const { title, paraph, date } = Astro.props;
+---
+
+<article class="art-rec">
+  <h3>{title} <span>{date}</span></h3>
+  <p>{paraph}</p>
+</article>
+
+<style>
+  .art-rec {
+    background-color: var(--bg-article-r);
+    border: 3px solid var(--secundary-color);
+    padding: 10px;
+    border-radius: 15px;
+  }
+  h3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0; 
+    font-size: 20px;   
+  }
+  p {
+    font-size: 14px;
+    margin: 0;
+  }
+  span {
+    font-weight: 400;
+    font-size: 14px;
+    margin: 0;
+  }
+</style>
