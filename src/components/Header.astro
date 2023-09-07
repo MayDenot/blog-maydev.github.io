@@ -1,12 +1,14 @@
 <section>
   <header>
-    <img src="/LogoPortafolio.webp" alt="Logo de MayDev" />
-    <svg id="moon"
+    <img src="/public/LogoPortafolio.webp" alt="Logo de MayDev" />
+    <svg
+      id="moon"
       xmlns="http://www.w3.org/2000/svg"
       height="1.9em"
       viewBox="0 0 384 512"
     >
-      <svg id="sun"
+      <svg
+        id="sun"
         xmlns="http://www.w3.org/2000/svg"
         height="2.3em"
         viewBox="0 0 512 512"
@@ -26,7 +28,12 @@
       <span>tecnologías y programación.</span>
     </h2>
     <div class="cont-input">
-      <input type="search" placeholder="Busca el contenido que quieras.." name="search" id="search-article" />
+      <input
+        type="search"
+        placeholder="Busca el contenido que quieras.."
+        name="search"
+        id="search-article"
+      />
     </div>
   </div>
   <footer>
@@ -96,7 +103,6 @@
     padding: 0 15px;
   }
   input::placeholder {
-    font-family: "Poppins";
     font-size: 12px;
     color: black;
     opacity: 0.6;
@@ -180,6 +186,29 @@
     }
     footer {
       margin-bottom: 15px;
+    }
+  }
+  @media screen and (width >= 1440px) {
+    header img {
+      width: 12%;
+    }
+    header svg {
+      height: 2.6em;
+    }
+    .body {
+      padding: 0;
+    }
+    h2 {
+      font-size: 30px;
+    }
+    li a {
+      font-size: 20px;
+    }
+    input {
+      height: 40px;
+    }
+    input::placeholder {
+      font-size: 14px;
     }
   }
 </style>

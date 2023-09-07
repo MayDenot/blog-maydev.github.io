@@ -1,5 +1,5 @@
 ---
-import Layout from "../components/Layout.astro";
+import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Content from "../components/Content.astro";
 ---
@@ -15,7 +15,7 @@ import Content from "../components/Content.astro";
 	</main>
 </Layout>
 
-<style>
+<style is:global>
 	:root {
 		--bg-light: #ffffff;
 		--bg-dark: #2a4359;
@@ -25,6 +25,13 @@ import Content from "../components/Content.astro";
 		--quaternary-color: #c0c0c0;
 		--bg-article-c: rgba(0, 116, 217, 25%);
 		--bg-article-r: rgba(50, 205, 50, 25%);
+	}
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+    font-family: "Poppins";
+		overflow-x: hidden;
 	}
 	@media screen and (width >= 1024px) {
 		main {
