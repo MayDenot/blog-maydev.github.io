@@ -5,19 +5,36 @@ import Content from "../components/Content.astro";
 ---
 
 <Layout>
-	<Header/>
-	<Content/>
+	<main>
+		<section class="left">
+			<Header/>
+		</section>
+		<section class="right">
+			<Content/>
+		</section>
+	</main>
 </Layout>
 
 <style>
 	:root {
 		--bg-light: #ffffff;
-		--bg-dark: #2A4359;
+		--bg-dark: #2a4359;
 		--primary-color: #0074d9;
 		--secundary-color: #32cd32;
 		--tertiary-color: #333333;
-		--quaternary-color: #C0C0C0;
+		--quaternary-color: #c0c0c0;
 		--bg-article-c: rgba(0, 116, 217, 25%);
 		--bg-article-r: rgba(50, 205, 50, 25%);
+	}
+	@media screen and (width >= 1024px) {
+		main {
+			width: 100vw;
+			height: 100%;
+			display: grid;
+			grid-template-columns: 40vw 60vw;
+		}
+		.left {
+			grid-column: 1;
+		}
 	}
 </style>
