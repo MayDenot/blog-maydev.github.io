@@ -17,22 +17,15 @@ Para verificar que versión de node tenes, escribe en tu terminal:
 node  -v
 ```
 
-### <a id="1"></a> Para inicilizar el proyecto vamos a utilizar el asistente de configuración de Astro.
+### <a id="1"></a> Instalación desde la terminal
+
+Para inicilizar el proyecto vamos a utilizar el asistente de configuración de Astro.
 
 <span class="list">1</span> Abrir la terminal de su preferencia y ejecutar el siguiente comando utilizando tu gestor de paquetes favorito.
 
-<span>npm</span> 
-```
-npm create astro@latest
-```
-<span>pnpm</span> 
-```
-pnpm create astro@latest
-```
-<span>yarn</span>
-```
-yarn create astro
-```
+<span>npm</span>        | <span>pnpm</span>        | <span>yarn</span>  |
+:---------------------: | :----------------------: | :----------------: |
+npm create astro@latest | pnpm create astro@latest | yarn create astro  |            
 
 <span class="list">2</span> Para confirmar ejecuta <span class="strong">y</span>.
 
@@ -62,7 +55,7 @@ Y por último, te preguntará si quieres inicializar este proyecto en un reposit
 
 ![Repositorio de Git 'Si' o 'No' (Opcional).](../images/Astro6.png)
 
-Finalmente accederás a la carpeta de tu proyecto, con los comando cd "nombredetuproyecto"
+Finalmente accederás a la carpeta de tu proyecto, con los comando cd <span class="strong">"nombredetuproyecto"</span>
 
 Se tendría que ver algo así:
 
@@ -72,20 +65,13 @@ Para abrir tu proyecto en tu editor de código ejecuta el comando <span class="s
 
 ![Abrir editor de código desde la terminal.](../images/Astro7.png)
 
-### <a id="2"></a> Para ejecutar Astro en modo desarrollo, ejecuta en la terminal el siguiente comando utilizando tu gestor de paquetes favorito:
+### <a id="2"></a> Ejecutar Astro en modo desarrollo
 
-<span>npm</span>
-```
-npm run dev
-```
-<span>pnpm</span>
-```
-pnpm run dev
-```
-<span>yarn</span>
-```
-yarn run dev
-```
+Para ello, ejecuta en la terminal el siguiente comando utilizando tu gestor de paquetes favorito:
+
+<span>npm</span>        | <span>pnpm</span>        | <span>yarn</span>  |
+:---------------------: | :----------------------: | :----------------: |
+npm create astro@latest | pnpm create astro@latest | yarn create astro  |   
 
 Ahora te aparecerá en la terminal la confirmación de Astro que está siendo ejecutado en modo dev (desarrollo).
 
