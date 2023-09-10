@@ -1,47 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Header from "../components/Header.astro";
 import Content from "../components/Content.astro";
 ---
 
-<Layout>
-	<main>
-		<section class="left">
-			<Header/>
-		</section>
-		<section class="right">
-			<Content/>
-		</section>
-	</main>
+<Layout title="Blog maydev">
+	<Content />
 </Layout>
 
-<style is:global>
-	:root {
-		--bg-light: #ffffff;
-		--bg-dark: #2a4359;
-		--primary-color: #0074d9;
-		--secundary-color: #32cd32;
-		--tertiary-color: #333333;
-		--quaternary-color: #c0c0c0;
-		--bg-article-c: rgba(0, 116, 217, 25%);
-		--bg-article-r: rgba(50, 205, 50, 25%);
-	}
-	* {
-		margin: 0;
-		padding: 0;
-		box-sizing: border-box;
-    font-family: "Poppins";
-		overflow-x: hidden;
-	}
-	@media screen and (width >= 1024px) {
-		main {
-			width: 100vw;
-			height: 100%;
-			display: grid;
-			grid-template-columns: 40vw 60vw;
-		}
-		.left {
-			grid-column: 1;
-		}
-	}
-</style>

@@ -1,0 +1,38 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ArticlesCateg from "../components/ArticlesCateg.astro";
+---
+
+<Layout title="Hardware">
+  <section>
+    <div class="wrapper">
+      <h1>Hardware</h1>
+      <p>En esta sección brindo opiniones e información sobre hardware.</p>
+    </div>
+    <a href="/">
+      <ArticlesCateg title="💻 Hola"/>
+    </a>
+  </section>
+</Layout>
+
+<style>
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px;
+  }
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  h1 {
+    margin: 10px 0;
+    font-size: 40px;
+  }
+  p {
+    text-align: center;
+  }
+</style>

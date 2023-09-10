@@ -1,31 +1,39 @@
 ---
-  interface Props {
-    title: string;
-    paraph: string;
-  }
+interface Props {
+  title: string;
+  paraph?: string;
+  href?: string;
+}
 
-  const { title, paraph } = Astro.props;
+const { title, paraph, href } = Astro.props;
 ---
 
-<article class="art-cat">
-  <h3>{title}</h3>
-  <p>{paraph}</p>
-</article>
+<a href={href}>
+  <article class="art-cat">
+    <h3>{title}</h3>
+    <p>{paraph}</p>
+  </article>
+</a>
 
 <style>
+  a {
+    color: black;
+    text-decoration: none;
+  }
   .art-cat {
-    background-color: var(--bg-article-c);
-    border: 3px solid var(--primary-color);
+    width: 290px;
     padding: 10px;
+    border: 3px solid var(--primary-color);
+    background-color: var(--bg-article-c);
     border-radius: 15px;
     margin-bottom: 10px;
   }
   h3 {
-    font-size: 20px;   
-    margin: 0; 
+    font-size: 18px;
+    margin: 0;
   }
   p {
-    font-size: 14px;
+    font-size: 12px;
     margin: 0;
   }
   @media screen and (width >= 425px) {
@@ -49,7 +57,6 @@
     }
     h3 {
       font-size: 23px;
-      margin-bottom: 5px;
     }
   }
 </style>

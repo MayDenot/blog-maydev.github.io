@@ -1,0 +1,86 @@
+---
+import Layout404 from "../layouts/Layout404.astro";
+---
+
+<Layout404>
+  <main>
+    <section>
+      <h1>404 Not Found</h1>
+      <h2>Esta página no existe.</h2>
+      <br />
+      <a href="/blog-maydev.github.io/">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="icon icon-tabler icon-tabler-arrow-badge-left"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          stroke-width="2"
+          stroke="#0074d9"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M11 17h6l-4 -5l4 -5h-6l-4 5z"></path>
+        </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="icon icon-tabler icon-tabler-arrow-badge-left"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          stroke-width="2"
+          stroke="#0074d9"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M11 17h6l-4 -5l4 -5h-6l-4 5z"></path>
+        </svg>Volver a la página principal
+      </a>
+    </section>
+  </main>
+</Layout404>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+  }
+  body {
+    margin: 0;
+  }
+  main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333333;
+  }
+  section {
+    text-align: center;
+  }
+  h1 {
+    font-size: 50px;
+  }
+  a {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    color: #0074d9;
+    text-decoration: none;
+    transition: .3s ease-in-out;
+  }
+  a:hover {
+    scale: 1.02;
+    text-shadow: 0 0 15px #0074d9;
+  }
+  a:hover svg {
+    filter: drop-shadow(0 0 15px #0074d9);
+  }
+</style>

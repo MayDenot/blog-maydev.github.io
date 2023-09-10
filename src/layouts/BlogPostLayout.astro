@@ -1,0 +1,121 @@
+---
+import Layout from "./Layout.astro";
+import * as greatPost from "../pages/posts/como-iniciar-proyecto-en-astro.md";
+---
+
+<Layout title={greatPost.frontmatter.title}>
+  <section class="container-post">
+    <div class="wrapper-post">
+      <slot />
+    </div>
+  </section>
+</Layout>
+
+<!-- 
+Cosas por arreglar:
+  Tmñ de imagenes
+  Terminal ("icono")
+  Ancors relacionados con el navegador del articulo
+  Los iconos del Layout, la ruta no funciona, nose porque
+-->
+
+<style is:global>
+  .container-post {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+  }
+  .container-post h1 {
+    font-size: 20px;
+  }
+  .container-post h4 {
+    font-size: 13px;
+    padding: 5px;
+    background-color: #32cd3277;
+    margin: 10px 0;
+  }
+  .container-post h3 {
+    font-size: 14px;
+    margin: 10px 0;
+  }
+  .container-post p {
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+  .container-post pre {
+    width: 250px;
+    position: relative;
+    padding: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    margin: 5px 0 10px 10px;
+  }
+  .container-post span {
+    font-size: 13px;
+  }
+  .container-post code::after {
+    content: ">_";
+    position: absolute;
+    right: 0;
+    transform: translate(-10px, -15px);
+    font-size: 12px;
+    color: white;
+    background-color: black;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    padding: 2px 6px;
+    border-radius: 5px;
+  }
+  .container-post .strong {
+    padding: 1px 6px;
+    background-color: #32cd3277;
+    border-radius: 5px;
+  }
+  .container-post .list {
+    padding: 0 4px;
+    background-color: #0074d977;
+    border-radius: 3px;
+  }
+  .wrapper-post {
+    max-width: 60ch;
+    display: flex;
+    flex-direction: column;
+  }
+  @media screen and (width >= 768px) {
+    .container-post h1 {
+      font-size: 40px;
+    }
+    .container-post p {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    .container-post h4 {
+      font-size: 15px;
+      padding: 10px;
+    }
+    .container-post h3 {
+      font-size: 17px;
+    }
+  }
+  @media screen and (width >= 1440px) {
+    .container-post h1 {
+      font-size: 35px;
+    }
+    .container-post h4 {
+      padding: 10px;
+      margin: 20px 0;
+    }
+    .container-post h3 {
+      margin: 20px 0;
+    }
+    .container-post p {
+      font-size: 15px;
+    }
+    .wrapper-post {
+      max-width: 75ch;
+    }
+    .container-post code::after {
+      font-size: 16px;
+      transform: translate(-10px, -20px);
+    }
+  }
+</style>
