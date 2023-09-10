@@ -14,19 +14,16 @@ import RecientArticles from "../components/RecientArticles.astro";
     <ArticlesCateg
       title="Programación"
       paraph="En esta sección comparto información sobre programación, y mis estudios como autodidácta."
-      href="/blog-maydev.github.io/programacion"    
-      />
+      href="/blog-maydev.github.io/programacion"
+    />
     <h3>Últimos artículos</h3>
-    <RecientArticles
-      title="Hardware"
-      paraph="Requisitos de una PC para programar en 2023."
-      date="04/09/23"
-    />
-    <RecientArticles
-      title="Programación"
-      paraph="¿Cómo aprendí Astro? Ruta de aprendizaje, guía y recomendación."
-      date="18/08/23"
-    />
+    <a href="/blog-maydev.github.io/posts/como-iniciar-proyecto-en-astro">
+      <RecientArticles
+        title="¿Cómo iniciar proyecto en Astro? 🚀"
+        paraph="Programación"
+        date="09/09/23"
+      />
+    </a>
   </div>
 </section>
 
@@ -48,6 +45,9 @@ import RecientArticles from "../components/RecientArticles.astro";
   }
   h3 {
     padding-bottom: 10px;
+  }
+  a {
+    text-decoration: none;
   }
   @media screen and (width >= 425px) {
     .wrapper-article {

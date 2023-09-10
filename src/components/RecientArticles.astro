@@ -1,8 +1,8 @@
 ---
   interface Props {
     title: string;
-    paraph: string;
-    date: string;
+    paraph?: string;
+    date?: string;
   }
 
   const { title, paraph, date } = Astro.props;
@@ -21,6 +21,7 @@
     background-color: var(--bg-article-r);
     border-radius: 15px;
     margin-bottom: 10px;
+    color: black;
   }
   h3 {
     display: flex;
@@ -59,7 +60,6 @@
     }
     h3 {
       font-size: 23px;
-      margin-bottom: 5px;
     }
   }
 </style>

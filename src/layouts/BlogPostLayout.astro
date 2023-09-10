@@ -25,12 +25,6 @@ import * as greatPost from "../pages/posts/como-iniciar-proyecto-en-astro.md";
   </section>
 </Layout>
 
-<!-- 
-Cosas por arreglar:
-  Terminal ("icono")
-  view transition al navegador
--->
-
 <style is:global>
   .container-post {
     position: relative;
@@ -68,7 +62,8 @@ Cosas por arreglar:
     color: white;
     margin-bottom: 15px;
   }
-  .container-post table p {
+  .container-post table td {
+    font-size: 10px;
     font-weight: 400;
   }
   .container-post table span {
@@ -78,13 +73,14 @@ Cosas por arreglar:
     position: absolute;
     content: ">_";
     right: 0;
-    transform: translate(-10px, -15px);
-    font-size: 12px;
-    color: white;
-    background-color: black;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
     padding: 2px 6px;
     border-radius: 5px;
+    transform: translate(-10px);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    font-size: 12px;
+    font-weight: 600;
+    color: white;
+    background-color: black;
   }
   .container-post .strong {
     padding: 1px 6px;
@@ -119,8 +115,15 @@ Cosas por arreglar:
     .container-post h3 {
       font-size: 17px;
     }
+    .container-post table td {
+      font-size: 12px;
+    }
   }
   @media screen and (width >= 1024px) {
+    .wrapper-post {
+      max-width: 70ch;
+      margin-left: 10px;
+    }
     .container-post h1 {
       font-size: 28px;
     }
@@ -135,8 +138,8 @@ Cosas por arreglar:
     .container-post p {
       font-size: 13px;
     }
-    .wrapper-post {
-      max-width: 70ch;
+    .container-post table td {
+      font-size: 14px;
     }
     .container-post {
       display: grid;

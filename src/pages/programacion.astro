@@ -1,15 +1,20 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import ArticlesCateg from "../components/ArticlesCateg.astro";
+import RecientArticles from "../components/RecientArticles.astro";
 ---
 
 <Layout title="Programación">
   <section>
     <div class="wrapper">
       <h1>Programación</h1>
+      <p>En esta sección brindo información sobre programación como tecnologías, frameworks, lenguajes de programación, étc.</p>
     </div>
-    <ArticlesCateg title="¿Cómo iniciar un proyecto en Astro? 🚀" />
-    <a href="/blog-maydev.github.io/posts/como-iniciar-proyecto-en-astro">Post-1</a>
+    <a href="/blog-maydev.github.io/posts/como-iniciar-proyecto-en-astro">
+      <RecientArticles 
+      title="¿Cómo iniciar un proyecto en Astro? 🚀" 
+      date="09/09/23"
+      />
+    </a>
   </section>
 </Layout>
 
@@ -32,5 +37,9 @@ import ArticlesCateg from "../components/ArticlesCateg.astro";
   }
   p {
     text-align: center;
+    max-width: 75ch ;
+  }
+  a {
+    text-decoration: none;
   }
 </style>
