@@ -33,37 +33,37 @@ npm create astro@latest | pnpm create astro@latest | yarn create astro  |
 
 Aquí tendrás que escribir el nombre de tu proyecto, ya que viene uno por default:
 
-![Ejemplo de que te aparecerá en la terminal.](../../../public/Astro1.png)
+![Ejemplo de que te aparecerá en la terminal.](/assets/Astro1.png)
 
 Tendrás que elegir cómo se estructurará tu proyecto, el recomendado es el primero y en caso de que quieras armarlo vos mismo, elige la opción de empty (vacío).
 
-![Las preguntas que deberían salirte sobre los templates de tu proyecto.](../../../public/Astro2.png)
+![Las preguntas que deberían salirte sobre los templates de tu proyecto.](/assets/Astro2.png)
 
 Te preguntará si quieres instalar las dependencias, lo recomendado es que si las instales y siempre.
 
-![Dependencias 'Si' o 'No'.](../../../public/Astro3.png)
+![Dependencias 'Si' o 'No'.](/assets/Astro3.png)
 
 Si quieres usar TypeScript elige que sí, aunque esta opción luego podrás cambiarla manualmente en caso de arrepentirte.
 
-![Usaras TypeScript 'Si' o 'No'.](../../../public/Astro4.png)
+![Usaras TypeScript 'Si' o 'No'.](/assets/Astro4.png)
 
 Te preguntará qué tan estricto debería ser TypeScript, la recomendada es Strict, pero en caso de no estar seguro de usarlo, puedes elegir la opción de Relaxed.
 
-![Como quieres usar TypeScript.](../../../public/Astro5.png)
+![Como quieres usar TypeScript.](/assets/Astro5.png)
 
 Y por último, te preguntará si quieres inicializar este proyecto en un repositorio de Git, como esta pregunta es opcional, recomiendo poner que No y en caso de arrepentirte podrás inicializar luego manualmente el repositorio.
 
-![Repositorio de Git 'Si' o 'No' (Opcional).](../../../public/Astro6.png)
+![Repositorio de Git 'Si' o 'No' (Opcional).](/assets/Astro6.png)
 
 Finalmente accederás a la carpeta de tu proyecto, con los comando cd <span class="strong">"nombredetuproyecto"</span>
 
 Se tendría que ver algo así:
 
-![Rutas de como debería quedar tu terminal.](../../../public/Astro8.png)
+![Rutas de como debería quedar tu terminal.](/assets/Astro8.png)
 
 Para abrir tu proyecto en tu editor de código ejecuta el comando <span class="strong">code .</span>.
 
-![Abrir editor de código desde la terminal.](../../../public/Astro7.png)
+![Abrir editor de código desde la terminal.](/assets/Astro7.png)
 
 ### <a id="2"></a> Ejecutar Astro en modo desarrollo
 
@@ -75,10 +75,10 @@ npm create astro@latest | pnpm create astro@latest | yarn create astro  |
 
 Ahora te aparecerá en la terminal la confirmación de Astro que está siendo ejecutado en modo dev (desarrollo).
 
-![Confirmación de Astro, con el enlace para visualizar la página.](../../../public/Astro9.png)
+![Confirmación de Astro, con el enlace para visualizar la página.](/assets/Astro9.png)
 
 ### <a id="3"></a> Visualizar nuestro proyecto en el navegador
 
 Para visualizar tu proyecto en tu navegador haz click en la parte de tu terminal donde dice Local, u otra opción es escribir manualmente la dirección.
 
-![Página por default de Astro en el navegador.](../../../public/Astro10.png)
+![Página por default de Astro en el navegador.](/assets/Astro10.png)

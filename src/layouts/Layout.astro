@@ -9,7 +9,7 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang="es" id="html">
 	<head>
 		<meta charset="utf-8" />
 		<link
@@ -22,7 +22,7 @@ const { title } = Astro.props;
 		<title>{title}</title>
 		<ViewTransitions />
 	</head>
-	<body id="body">
+	<body>
 		<main>
 			<div class="left">
 				<section>
@@ -255,16 +255,6 @@ const { title } = Astro.props;
 				}
 			}
 		</style>
-
-		<script>
-			const btnDarkmode = document.querySelector("#moon");
-			const body = document.querySelector("#body");
-
-			btnDarkmode.addEventListener("click", () => {
-				body.classList.toggle("darkmode");
-			});
-		</script>
-
 		<style is:global>
 			:root {
 				--bg-light: #ffffff;
@@ -283,40 +273,37 @@ const { title } = Astro.props;
 				font-family: "Poppins";
 				overflow-x: hidden;
 			}
-			body {
+			#html {
 				scroll-behavior: smooth;
 			}
-			body.darkmode {
+			#html.darkmode {
 				background-color: #2a4359;
 			}
-			body.darkmode #moon {
+			#html.darkmode #moon {
 				display: none;
 			}
-			body.darkmode #sun {
+			#html.darkmode #sun {
 				display: block;
 			}
-			body.darkmode h3 {
+			#html.darkmode h3 {
 				color: #fff;
 			}
-			body.darkmode h1 {
+			#html.darkmode h1 {
 				color: #fff;
 			}
-			body.darkmode p {
+			#html.darkmode p {
 				color: #fff;
 			}
-			body.darkmode span {
+			#html.darkmode nav {
 				color: #fff;
 			}
-			body.darkmode nav {
+			#html.darkmode ul li a {
 				color: #fff;
 			}
-			body.darkmode ul li a {
+			#html.darkmode h5 {
 				color: #fff;
 			}
-			body.darkmode h5 {
-				color: #fff;
-			}
-			body.darkmode h4 {
+			#html.darkmode h4 {
 				color: #fff;
 			}
 			#moon,
@@ -342,3 +329,12 @@ const { title } = Astro.props;
 		</style>
 	</body>
 </html>
+
+<script type="module">
+	const btnDarkmode = document.querySelector("#moon");
+	const htmlContent = document.querySelector("#html");
+
+	btnDarkmode.addEventListener("click", () => {
+		htmlContent.classList.toggle("darkmode");
+	});
+</script>
