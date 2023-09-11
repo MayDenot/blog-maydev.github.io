@@ -81,4 +81,4 @@ Ahora te aparecerá en la terminal la confirmación de Astro que está siendo ej
 
 Para visualizar tu proyecto en tu navegador haz click en la parte de tu terminal donde dice Local, u otra opción es escribir manualmente la dirección.
 
-![Página por default de Astro en el navegador.](/assets/Astro10.png)
+![Página por default de Astro en el navegador.](/assets/Astro10.png)n
