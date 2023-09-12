@@ -1,0 +1,21 @@
+---
+const { headings } = Astro.props;
+---
+
+<aside class="container-post">
+  <div class="wrapper-post">
+    <slot />
+  </div>
+  <nav>
+    <h5>Contenido del artículo</h5>
+    <ul>
+      {
+        headings.map((heading) => (
+          <li>
+            <a href={`#${heading.id}`}>{heading.subtitles}</a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+</aside>

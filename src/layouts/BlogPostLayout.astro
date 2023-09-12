@@ -1,13 +1,16 @@
 ---
 import Layout from "./Layout.astro";
 import * as greatPost from "../pages/posts/como-iniciar-proyecto-en-astro.md";
+import NavArticles from "../components/NavArticles.astro";
 ---
 
 <!-- 
 Cosas por hacer y arreglar:
-  - Arreglar el navegador secundario de cada artículo para que sea
-    reutilizable
-  - Arreglar el boton para cambiar modo
+  - Arreglar las imagenes y css del articulo de Astro (se rompio) ✔
+  - Arreglar la fecha en dispositivos moviles del articulo CORS ✔
+  - Arreglar el boton para cambiar el modo ❌
+  - Arreglar el navegador secundario de cada artículo para que sea 
+    reutilizable ==> a medias, falta hacer que se de cuenta que articulos es cual
 -->
 
 <Layout title={greatPost.frontmatter.title}>
@@ -15,20 +18,7 @@ Cosas por hacer y arreglar:
     <div class="wrapper-post">
       <slot />
     </div>
-    <nav>
-      <h5>Contenido del artículo</h5>
-      <ul>
-        <li>
-          <a href="#1">Instalación desde la terminal</a>
-        </li>
-        <li>
-          <a href="#2">Ejecutar Astro en modo desarrollo</a>
-        </li>
-        <li>
-          <a href="#3">Visualizar nuestro proyecto en el navegador</a>
-        </li>
-      </ul>
-    </nav>
+    <NavArticles headings={greatPost.frontmatter.articleHeadings} />
   </section>
 </Layout>
 
@@ -76,28 +66,14 @@ Cosas por hacer y arreglar:
   .container-post table span {
     color: #32cd32;
   }
-  .container-post .cors-solution,
-  .node-astro {
-    width: 100%;
+  .container-post .cors-solution {
     position: relative;
   }
   .container-post .cors-solution pre {
     width: 100%;
   }
-  .container-post .node-astro::after {
-    position: absolute;
-    content: ">_";
-    right: 20px;
-    top: 0;
-    padding: 2px 6px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-    font-size: 12px;
-    font-weight: 600;
-    color: white;
-    background-color: black;
-  }
-  .container-post .cors-art img {
+  .container-post .cors-art img,
+  .astro-art img {
     width: 98%;
   }
   .container-post .cors-solution::after {
@@ -151,6 +127,9 @@ Cosas por hacer y arreglar:
     .container-post table td {
       font-size: 12px;
     }
+    .container-post .astro-art img {
+      width: 90%;
+    }
   }
   @media screen and (width >= 1024px) {
     .wrapper-post {
@@ -173,6 +152,7 @@ Cosas por hacer y arreglar:
     }
     .container-post table td {
       font-size: 14px;
+      padding: 0 8px;
     }
     .container-post {
       display: grid;
@@ -202,6 +182,9 @@ Cosas por hacer y arreglar:
     }
     .container-post nav a:hover {
       background-color: #32cd3277;
+    }
+    .container-post .astro-art img {
+      width: 70%;
     }
   }
   @media screen and (width >= 1440px) {

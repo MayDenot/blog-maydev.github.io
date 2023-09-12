@@ -1,19 +1,27 @@
 ---
-title: "¿Qué es el CORS, Preflight y sus soluciones?"
+title: "¿Qué es el CORS, Preflight y soluciones?"
 layout: "../../layouts/BlogPostLayout.astro"
 author: "Mayra Denot"
 date: "12/09/23"
+articleHeadings: [
+  { id: "4", subtitles: "¿Qué significa CORS?" },
+  { id: "5", subtitles: "¿Cómo funciona?" },
+  { id: "6", subtitles: "¿Cómo podemos identificar si se trata de un problema de CORS?" },
+  { id: "7", subtitles: "SOLUCIÓN del CORS Simple" },
+  { id: "8", subtitles: "¿Qué es el CORS Preflight?" },
+  { id: "9", subtitles: "SOLUCIÓN" }
+]
 ---
 
 <section class="cors-art">
 
-# ¿Qué es el CORS, Preflight y sus SOLUCIONES?
+# ¿Qué es el CORS, Preflight y SOLUCIONES?
 
-### <a id="1"></a> ¿Qué significa CORS?
+### <a id="4"></a> ¿Qué significa CORS?
 
 Cross Origin Resource Sharing o intercambio de recursos de origen cruzado (CORS) es un error que se presenta en los navegadores y que debe ser solucionado por el lado del servidor (backend).
 
-### <a id="2"></a> ¿Cómo funciona?
+### <a id="5"></a> ¿Cómo funciona?
 
 El CORS es un mecanismo que está respaldado por las cabeceras o headers HTTP, los cuales permiten a los servidores indicarles a los navegadores si tienen que permitir cargar recursos (imágenes, vídeos, fuentes, css, etc) para otro origen.
 
@@ -23,7 +31,7 @@ Para comprender mejor les dejo un gráfico con el recorrido o flujo del CORS:
 
 ![Flujo del CORS](/assets/FlujoCORS.jpg)
 
-### <a id="3"></a> ¿Cómo podemos identificar si se trata de un problema de CORS?
+### <a id="6"></a> ¿Cómo podemos identificar si se trata de un problema de CORS?
 
 Hay dos maneras, la más fácil y “visible” o accesible es abriendo las DevTools y en la consola nos aparecerá un mensaje como este.
 
@@ -37,7 +45,7 @@ Y luego más abajo se podrán ver muchas o algunas peticiones con sus respectivo
 
 ![Error CORS desde la Red](/assets/DevToolsCORSStatus.jpg)
 
-### <a id="4"></a> SOLUCIÓN del CORS Simple
+### <a id="7"></a> SOLUCIÓN del CORS Simple
 
 Para solucionarlo tendremos que agregar a la petición correspondiente el encabezado, en caso de la imagen anterior se puede ver que la petición es /movies.
 
@@ -107,7 +115,7 @@ app.get('/movies', (req, res) => {
 ```
 </div>
 
-### <a id="5"></a> ¿Qué es el CORS Preflight?
+### <a id="8"></a> ¿Qué es el CORS Preflight?
 
 El CORS preflight es un método complejo al igual que PUT, DELETE y PATCH.
 Cuando hacemos una petición (request) PUT, PATCH o DELETE, necesitaremos otra petición especial llamada OPTIONS. Con ella le indicaremos que antes de que se ejecute cualquiera de los tres verbos anteriormente nombrados (PUT, PATCH o DELETE) que avise que lo va hacer.
@@ -118,7 +126,7 @@ Ejemplo con DELETE:
 
 Primero aparecerá el error CORS y debajo el OPTIONS (preflight).
 
-### <a id="6"></a> SOLUCIÓN
+### <a id="9"></a> SOLUCIÓN
 
 A nuestra aplicación le agregaremos el verbo OPTIONS como cualquier otro método (GET, PUT, etc). Y dentro le pasaremos la misma solución que en el CORS simple, pero con esto no alcanzará, por lo que debemos sumarle otro header que le indique que otros métodos podrá utilizar también.
 
