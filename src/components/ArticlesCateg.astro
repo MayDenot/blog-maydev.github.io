@@ -21,27 +21,38 @@ const { title, paraph, href } = Astro.props;
     text-decoration: none;
   }
   #html.darkmode a {
-		color: #fff;
-	}
+    color: #fff;
+  }
   .art-cat {
     width: 290px;
     padding: 10px;
-    border: 3px solid var(--primary-color);
+    box-shadow: 0px 2px 2px rgba(0, 116, 217, 0.514);
     background-color: var(--bg-article-c);
     border-radius: 15px;
     margin-bottom: 10px;
   }
+  .art-cat:hover {
+    background-color: rgba(0, 116, 217, 0.589);
+  }
   h3 {
-    font-size: 18px;
+    font-size: 14px;
     margin: 0;
   }
   p {
-    font-size: 12px;
+    font-size: 11px;
     margin: 0;
   }
   @media screen and (width >= 425px) {
     .art-cat {
       width: 350px;
+    }
+    h3 {
+      font-size: 18px;
+      margin: 0;
+    }
+    p {
+      font-size: 12px;
+      margin: 0;
     }
   }
   @media screen and (width >= 768px) {

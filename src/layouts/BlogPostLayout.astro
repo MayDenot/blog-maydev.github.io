@@ -3,6 +3,13 @@ import Layout from "./Layout.astro";
 import * as greatPost from "../pages/posts/como-iniciar-proyecto-en-astro.md";
 ---
 
+<!-- 
+Cosas por hacer y arreglar:
+  - Arreglar el navegador secundario de cada artículo para que sea
+    reutilizable
+  - Arreglar el boton para cambiar modo
+-->
+
 <Layout title={greatPost.frontmatter.title}>
   <section class="container-post">
     <div class="wrapper-post">
@@ -69,18 +76,44 @@ import * as greatPost from "../pages/posts/como-iniciar-proyecto-en-astro.md";
   .container-post table span {
     color: #32cd32;
   }
-  .container-post code::after {
+  .container-post .cors-solution,
+  .node-astro {
+    width: 100%;
+    position: relative;
+  }
+  .container-post .cors-solution pre {
+    width: 100%;
+  }
+  .container-post .node-astro::after {
     position: absolute;
     content: ">_";
-    right: 0;
+    right: 20px;
+    top: 0;
     padding: 2px 6px;
     border-radius: 5px;
-    transform: translate(-10px);
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
     font-size: 12px;
     font-weight: 600;
     color: white;
     background-color: black;
+  }
+  .container-post .cors-art img {
+    width: 98%;
+  }
+  .container-post .cors-solution::after {
+    position: absolute;
+    content: "JS";
+    right: 20px;
+    top: 0;
+    padding: 2px 4px 2px 6px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+    font-size: 14px;
+    font-weight: 600;
+    color: black;
+    background-color: #fffb00;
+  }
+  .container-post .cors-solution .line span {
+    font-size: 10px;
   }
   .container-post .strong {
     padding: 1px 6px;
@@ -194,6 +227,9 @@ import * as greatPost from "../pages/posts/como-iniciar-proyecto-en-astro.md";
     .container-post nav a {
       font-size: 12px;
       padding: 2px;
+    }
+    .container-post .cors-solution .line span {
+      font-size: 14px;
     }
   }
 </style>

@@ -13,9 +13,12 @@ date: "09/09/23"
 
 Para verificar que versión de node tenes, escribe en tu terminal:
 
+<span class="node-astro">
+
 ```
 node  -v
 ```
+</span>
 
 ### <a id="1"></a> Instalación desde la terminal
 
