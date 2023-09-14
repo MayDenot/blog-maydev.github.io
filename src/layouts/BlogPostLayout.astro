@@ -1,24 +1,25 @@
 ---
 import Layout from "./Layout.astro";
-import * as greatPost from "../pages/posts/como-iniciar-proyecto-en-astro.md";
 import NavArticles from "../components/NavArticles.astro";
+const posts = await Astro.glob("../pages/posts/*.md");
+
+// const prueba2 = posts.map((post) => post.frontmatter);
+// console.log(prueba2)
+
 ---
 
 <!-- 
 Cosas por hacer y arreglar:
-  - Arreglar las imagenes y css del articulo de Astro (se rompio) ✔
-  - Arreglar la fecha en dispositivos moviles del articulo CORS ✔
   - Arreglar el boton para cambiar el modo ❌
   - Arreglar el navegador secundario de cada artículo para que sea 
-    reutilizable ==> a medias, falta hacer que se de cuenta que articulos es cual
+    reutilizable ==> a medias, falta hacer que se de cuenta que articulos es cual ❌
 -->
-
-<Layout title={greatPost.frontmatter.title}>
+<Layout title={""}>
   <section class="container-post">
     <div class="wrapper-post">
       <slot />
     </div>
-    <NavArticles headings={greatPost.frontmatter.articleHeadings} />
+    <NavArticles />
   </section>
 </Layout>
 

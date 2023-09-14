@@ -3,10 +3,15 @@ title: "¿Cómo iniciar un proyecto con Astro?"
 layout: "../../layouts/BlogPostLayout.astro"
 author: "Mayra Denot"
 date: "09/09/23"
+ancors: [
+  {id: 1}, 
+  {id: 2}, 
+  {id: 3}
+]
 articleHeadings: [
-  { id: "1", subtitles: "Instalación desde la terminal" },
-  { id: "2", subtitles: "Ejecutar Astro en modo desarrollo" },
-  { id: "3", subtitles: "Visualizar nuestro proyecto en el navegador" }
+  {subtitles: "Instalación desde la terminal"}, 
+  {subtitles: "Ejecutar Astro en modo desarrollo"}, 
+  {subtitles: "Visualizar nuestro proyecto en el navegador"}
 ]
 ---
 

@@ -1,21 +1,26 @@
 ---
-const { headings } = Astro.props;
----
+const posts = await Astro.glob("../pages/posts/*.md");
 
-<aside class="container-post">
-  <div class="wrapper-post">
-    <slot />
-  </div>
-  <nav>
-    <h5>Contenido del artículo</h5>
-    <ul>
-      {
-        headings.map((heading) => (
-          <li>
-            <a href={`#${heading.id}`}>{heading.subtitles}</a>
-          </li>
-        ))
-      }
-    </ul>
-  </nav>
-</aside>
+const titlesPost = posts.map((post) => post.frontmatter.title);
+
+const ancorsPost = posts.map((post) => post.frontmatter.ancors);
+console.log(ancorsPost[0])
+
+const subtitlesPosts = posts.map((post) => post.frontmatter.articleHeadings);
+console.log(subtitlesPosts[0])
+
+---
+<nav>
+  <h5>Contenido del artículo</h5>
+  <ul>
+    <!-- <li>
+      <a href="#1">Subtitulo 1</a>
+    </li>
+    <li>
+      <a href="#2">Subtitulo 2</a>
+    </li>
+    <li>
+      <a href="#3">Subtitulo 3</a>
+    </li> -->
+  </ul>
+</nav>

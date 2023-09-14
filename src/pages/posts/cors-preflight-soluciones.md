@@ -3,13 +3,21 @@ title: "¿Qué es el CORS, Preflight y soluciones?"
 layout: "../../layouts/BlogPostLayout.astro"
 author: "Mayra Denot"
 date: "12/09/23"
+ancors: [
+  {id: 4}, 
+  {id: 5}, 
+  {id: 6}, 
+  {id: 7}, 
+  {id: 8}, 
+  {id: 9}
+]
 articleHeadings: [
-  { id: "4", subtitles: "¿Qué significa CORS?" },
-  { id: "5", subtitles: "¿Cómo funciona?" },
-  { id: "6", subtitles: "¿Cómo podemos identificar si se trata de un problema de CORS?" },
-  { id: "7", subtitles: "SOLUCIÓN del CORS Simple" },
-  { id: "8", subtitles: "¿Qué es el CORS Preflight?" },
-  { id: "9", subtitles: "SOLUCIÓN" }
+  {subtitles: "¿Qué significa CORS?"}, 
+  {subtitles: "¿Cómo funciona?"}, 
+  {subtitles: "¿Cómo podemos identificar si se trata de un problema de CORS?"},
+  {subtitles: "SOLUCIÓN del CORS Simple"},    
+  {subtitles: "¿Qué es el CORS Preflight?"},
+  {subtitles: "SOLUCIÓN"}
 ]
 ---
 
@@ -17,27 +25,29 @@ articleHeadings: [
 
 # ¿Qué es el CORS, Preflight y SOLUCIONES?
 
+12/09/23
+
 ### <a id="4"></a> ¿Qué significa CORS?
 
-Cross Origin Resource Sharing o intercambio de recursos de origen cruzado (CORS) es un error que se presenta en los navegadores y que debe ser solucionado por el lado del servidor (backend).
+Cross Origin Resource Sharing o intercambio de recursos de orígen cruzado (CORS) es un error que se presenta en los navegadores y que debe ser solucionado por el lado del servidor (backend).
 
 ### <a id="5"></a> ¿Cómo funciona?
 
-El CORS es un mecanismo que está respaldado por las cabeceras o headers HTTP, los cuales permiten a los servidores indicarles a los navegadores si tienen que permitir cargar recursos (imágenes, vídeos, fuentes, css, etc) para otro origen.
+El CORS es un mecanismo que está respaldado por las cabeceras o headers HTTP, los cuales permiten a los servidores indicarles a los navegadores si tienen que permitir cargar recursos (imágenes, vídeos, fuentes, css, étc) para otro orígen.
 
 Los orígenes pueden ser dominios, esquemas o puertos. 
 
-Para comprender mejor les dejo un gráfico con el recorrido o flujo del CORS:
+Para comprender mejor les dejo un gráfico con el flujo del CORS:
 
 ![Flujo del CORS](/assets/FlujoCORS.jpg)
 
 ### <a id="6"></a> ¿Cómo podemos identificar si se trata de un problema de CORS?
 
-Hay dos maneras, la más fácil y “visible” o accesible es abriendo las DevTools y en la consola nos aparecerá un mensaje como este.
+Hay dos maneras, la más fácil y “visible” o accesible es abriendo las DevTools y en la consola nos aparecerá un mensaje como el siguiente.
 
 ![Error CORS en consola](/assets/DevToolsCORSConsola.jpg)
 
-Y la otra es desde las DevTools vamos a ir a la parte superior donde dice Network o Red (recargamos la página con F5 para asegurarnos de que aparezcan las peticiones).
+Y la otra es desde las DevTools, vamos a ir a la parte superior donde dice Network o Red (recargamos la página con F5 para asegurarnos de que aparezcan las peticiones).
 
 ![Barra superior de las DevTools situados en Network o Red](/assets/DevToolsCORSNet.jpg)
 
@@ -59,6 +69,8 @@ app.get('/movies', (req, res) => {
 });
 ```
 </div>
+
+El * significa que le damos acceso a TODOS los orígenes, mientras que no sea nuestro propio orígen.
 
 Solución recomendada:
 <div class="cors-solution">
