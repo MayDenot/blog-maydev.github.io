@@ -5,7 +5,6 @@ const posts = await Astro.glob("../pages/posts/*.md");
 
 // const prueba2 = posts.map((post) => post.frontmatter);
 // console.log(prueba2)
-
 ---
 
 <!-- 
@@ -55,8 +54,8 @@ Cosas por hacer y arreglar:
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
     margin: 5px 0 10px 10px;
   }
-  .container-post table {
-    background-color: #24292e;
+  .astro-art table {
+    background-color: #1c1e20ce;
     color: white;
     margin-bottom: 15px;
   }
@@ -64,8 +63,23 @@ Cosas por hacer y arreglar:
     font-size: 10px;
     font-weight: 400;
   }
-  .container-post table span {
+  .container-post table th {
+    font-size: 12px;
+  }
+  .astro-art table span {
     color: #32cd32;
+  }
+  .oper-art table {
+    border: 2px solid #0074d977;
+  }
+  .oper-art thead {
+    background-color: #0074d977;
+  }
+  .oper-art thead th {
+    padding: 0 15px;
+  }
+  .oper-art td {
+    background-color: #0074d977;
   }
   .container-post .cors-solution {
     position: relative;
@@ -76,6 +90,9 @@ Cosas por hacer y arreglar:
   .container-post .cors-art img,
   .astro-art img {
     width: 98%;
+  }
+  .oper-art img {
+    width: 90%;
   }
   .container-post .cors-solution::after {
     position: absolute;

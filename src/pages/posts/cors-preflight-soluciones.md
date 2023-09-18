@@ -23,7 +23,7 @@ articleHeadings: [
 
 <section class="cors-art">
 
-# ¿Qué es el CORS, Preflight y SOLUCIONES?
+# ¿Qué es el CORS, Preflight y SOLUCIONES? ⛔
 
 12/09/23
 
